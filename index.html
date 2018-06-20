@@ -1,26 +1,54 @@
 <!DOCTYPE html >
 <html>
 <head>
+
 <meta charset=utf-8" />
-<meta http-equiv="windows-target" content="_top" />
+<meta http-equiv="windows-target" content="_blank" />
+
 <title>sap web top</title>
+
 <style type="text/css">
-       body{background-repeat:repeat}
+       body{background-repeat:repeat;
+       font-family:"微软雅黑";
+       font-size: 12pt;}
 </style>
+
+<Script type="text/javascript">
+     setInterval("JsTimer()",1000);
+     function JsTimer(){
+     var ClockTime=new Date();
+     var ClockHours=ClockTime.getHours();
+     var ClockMinutes=ClockTime.getMinutes();
+     var ClockSeconds=ClockTime.getSeconds();
+     if (ClockHours<=9)
+     ClockHours="0"+ClockHours;
+     if (ClockMinutes<=9)
+     ClockMinutes="0"+ClockMinutes;
+     if (ClockSeconds<=9)
+     ClockSeconds="0"+ClockSeconds;
+     JsClock.innerHTML=ClockHours+":"+ClockMinutes+":"+ClockSeconds;
+     }
+</script> 
+
+<script type="text/javascript">
+    function saveGuestBook()
+	{
+		objTable=document.getElementById("guestTable");
+		objRow=objTable.insertRow(objTable.rows.length);
+		objCell=objRow.insertCell();
+		objCell.innerText=document.getElementById("guestNote").value;
+	}
+</script>
+   
 </head>
 
-<body background="images/IMG_wood.jpg " 
+<body bgcolor="#CCCCCC" 
  topmargin="10" leftmargin="30" rightmargin="30" bottommargin="20"
 text="black" link="purple" alink="green" vlink="pink">
 
 <img src="images/IMG_worldweb.jpg" height="100"/> &nbsp;
+<span id="JsClock"></span> &nbsp; &nbsp; &nbsp; &nbsp;
 
-<video id=0 controls width=160 height=120>
-<source src="2922b/2922b.ogv" type='video/ogg; codecs="theora, vorbis"'/>
-<source src="2922b/2922b.webm" type='video/webm' >
-<source src="2922b/2922b.mp4" type='video/mp4'>
-<p>Video is not visible, most likely your browser does not support HTML5 video</p>
-</video>
 
 
 
@@ -32,14 +60,14 @@ text="black" link="purple" alink="green" vlink="pink">
 
 
 <center>
-<h2><font color="pink">Welcome to Iron-Man sky !欢迎朋友们来到铁人网络</font></h2>
+<h2><font color="#FF9966>Welcome to Iron-Man sky !欢迎朋友们来到铁人网络</font></h2>
 <br/><br />
 
-<a href="2-1.html"> Link to white-Swan-Hotel <a/>
+<a href="2-1.html" target="_blank"> Link to white-Swan-Hotel <a/>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<a href="1-2.htm"> Alinking Countryside  <a/>
+<a href="1-2.htm"  target="_blank"> Alinking Countryside  <a/>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<a href="1-1.htm"> Vlink Mu-mian-Tree <a/>
+<a href="1-1.htm" target="_blank"> Vlink Mu-mian-Tree <a/>
 <br />
 </center>
 
@@ -80,7 +108,7 @@ X<sup>3</sup>+9X<sup>2</sup>-8X<sup>1</sup>-10=0   &nbsp;&nbsp;关于xy方程&nb
          JJJJ       JJ          JJ          JJ
 </pre>
 
-<hr width="100%" size="-3" color="gray" align="left"  />
+
 How to set your PC running VMWare smooth，（
 <font color="black" size="3"><code>set page margin from top, bottom, left, right around 60 pix </code></font>）
 <blockquote>绝招1：编辑对应的VMWare虚拟机镜像后缀为 VMX 的文件（用记事本就能编辑），
@@ -93,23 +121,47 @@ How to set your PC running VMWare smooth，（
 
 <font size="+1" color="#0099CC">
 I.Learning at SAP internet >>>
-<a href="https://www.sap.com/china/"> <address>www.sap.com</address> <a/>
+<a href="https://www.sap.com/china/" target="_blank"> <address>www.sap.com</address> <a/>
 II.Download Linux software from Fedora.org>>>
-<a href="https://getfedora.org"><address>sftp://fedora28</address></a>
+<a href="https://getfedora.org" target="_blank"><address>sftp://fedora28</address></a>
 III.Have a break,  download my lucky movi >>>
 IV.Leave from this page >>>
-<a href="javascript:window.close()"> Close web-Brower-Window</a><br/>
+<a href="javascript:window.close()" target="_blank"> Close web-Brower-Window</a><br/>
 V. 返回页首Back to Top>>>>
 <a href="#"> Back to top </a>
 </font>
 
-<hr size="2" width="80%" color="#FFCC00" align="center"  />
-<center>
-<a href="mailto:webteam@sapweb.top">Design by jay &copy;&nbsp;&trade; , you can mail to us</a><br/>
+<p>欢迎使用留言板</p>
+<table width="30%" border="1" id="guestTable">
+  <tr>
+    <td height="223">已经留言的内容
+      <form id="form1" name="form1" method="post" action="">
+        <p>
+          <label for="guestNote"></label>
+          <textarea name="guestNote" id="guestNote" cols="45" rows="5"></textarea>
+        </p>
+        <p>
+          <input type="button" name="btnOk" id="btnOk" value="提交按钮Summit" onclick="saveGuestBook()"/>
+        </p>
+    </form></td>
+  </tr>
+</table>
 
-</center>
+You can click here to have a look my video. 你可以按播放按钮Play video.
+<video id=0 controls  width="480" height="360" align="bottom" >
+<source src="2922b/2922b.ogv" type='video/ogg; codecs="theora, vorbis"'/>
+<source src="2922b/2922b.webm" type='video/webm' >
+<source src="2922b/2922b.mp4" type='video/mp4'>
+<p>Video is not visible, most likely your browser does not support HTML5 video</p>
+</video> <br/>
+
+
+
+<hr size="2" width="80%" color="#FFCC00" align="center"  />
+
 <center>
-<a href="http://www.miitbeian.gov.cn">  粤ICP备18059298号-1<a/>
+<a href="mailto:webteam@sapweb.top" target="_blank">Design by jay &copy;&nbsp;&trade; , you can mail to us</a><br/>
+<a href="http://www.miitbeian.gov.cn" target="_blank">  粤ICP备18059298号-1<a/>
 </center>
 
 </body>
